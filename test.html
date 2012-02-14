@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @-webkit-keyframes hoping {
+    0% {
+      width: 110px;
+      height: 90px;
+      margin-left: -55px;
+      margin-top: 0px;
+    }
+    
+    15% {
+      width: 100px;
+      height: 100px;
+      margin-left: -50px;
+      margin-top: -90px;
+    }
+    
+    100% {
+      width: 90px;
+      height: 110px;
+      margin-left: -45px;
+      margin-top: -180px;
+    }
+  }
+
+  @-webkit-keyframes hoping-shadow {
+    0% {
+      width: 101px;
+      margin-left: -50px;
+      opacity: 0.9;
+    }
+    
+    15% {
+      width: 88px;
+      margin-left: -44px;
+      opacity: 0.3;
+    }
+
+    100% {
+      width: 80px;
+      margin-left: -40px;
+      opacity: 0.1;
+    }
+  }
+  
+  #animate_icon {
+    width: 400px;
+    height: 400px;
+  }
+  
+  #face {
+    background: url(face.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 101px;
+    height: 99px;
+    top: 200px;
+    left: 50%;
+    margin-left: -50px;
+    -webkit-animation: hoping 500ms ease-out infinite alternate;
+  }
+  
+  #shadow {
+  	z-index: -1;
+    opacity: 0.9;
+    width: 101px;
+    height: 15px;
+    top: 272px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#000));
+    border-radius: 50px /  6px 6px 12px 12px;
+    -webkit-animation: hoping-shadow 500ms ease-out infinite alternate;
+  }
+
+</style>
+</head>
+<body>
+<div id="animate_icon">
+	<div id="face"></div>
+	<div id="shadow"></div>
+</div>
+</body>
+</html>
